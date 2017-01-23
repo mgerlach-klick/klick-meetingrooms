@@ -24,12 +24,12 @@ return null;
 adzerk.boot_reload.client.resolve_url = (function adzerk$boot_reload$client$resolve_url(url,ws_host){
 var passed_uri = (new goog.Uri(url));
 var protocol = passed_uri.getScheme();
-var hostname = (function (){var G__9916 = window;
-var G__9916__$1 = (((G__9916 == null))?null:G__9916.location);
-if((G__9916__$1 == null)){
+var hostname = (function (){var G__9216 = window;
+var G__9216__$1 = (((G__9216 == null))?null:G__9216.location);
+if((G__9216__$1 == null)){
 return null;
 } else {
-return G__9916__$1.hostname;
+return G__9216__$1.hostname;
 }
 })();
 var host = (cljs.core.truth_(ws_host)?ws_host:((cljs.core.seq.call(null,hostname))?hostname:(function (){
@@ -56,10 +56,10 @@ return new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invok
 ,new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__8522__auto__,method_table__8518__auto__,prefer_table__8519__auto__,method_cache__8520__auto__,cached_hierarchy__8521__auto__));
 })();
 }
-cljs.core._add_method.call(null,adzerk.boot_reload.client.handle,new cljs.core.Keyword(null,"reload","reload",863702807),(function (p__9917,opts){
-var map__9918 = p__9917;
-var map__9918__$1 = ((((!((map__9918 == null)))?((((map__9918.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__9918.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__9918):map__9918);
-var files = cljs.core.get.call(null,map__9918__$1,new cljs.core.Keyword(null,"files","files",-472457450));
+cljs.core._add_method.call(null,adzerk.boot_reload.client.handle,new cljs.core.Keyword(null,"reload","reload",863702807),(function (p__9217,opts){
+var map__9218 = p__9217;
+var map__9218__$1 = ((((!((map__9218 == null)))?((((map__9218.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__9218.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__9218):map__9218);
+var files = cljs.core.get.call(null,map__9218__$1,new cljs.core.Keyword(null,"files","files",-472457450));
 return adzerk.boot_reload.reload.reload.call(null,files,opts);
 }));
 cljs.core._add_method.call(null,adzerk.boot_reload.client.handle,new cljs.core.Keyword(null,"visual","visual",942787224),(function (state,opts){
@@ -70,23 +70,23 @@ return null;
 }
 }));
 adzerk.boot_reload.client.connect = (function adzerk$boot_reload$client$connect(var_args){
-var args9920 = [];
-var len__8708__auto___9923 = arguments.length;
-var i__8709__auto___9924 = (0);
+var args9220 = [];
+var len__8708__auto___9223 = arguments.length;
+var i__8709__auto___9224 = (0);
 while(true){
-if((i__8709__auto___9924 < len__8708__auto___9923)){
-args9920.push((arguments[i__8709__auto___9924]));
+if((i__8709__auto___9224 < len__8708__auto___9223)){
+args9220.push((arguments[i__8709__auto___9224]));
 
-var G__9925 = (i__8709__auto___9924 + (1));
-i__8709__auto___9924 = G__9925;
+var G__9225 = (i__8709__auto___9224 + (1));
+i__8709__auto___9224 = G__9225;
 continue;
 } else {
 }
 break;
 }
 
-var G__9922 = args9920.length;
-switch (G__9922) {
+var G__9222 = args9220.length;
+switch (G__9222) {
 case 1:
 return adzerk.boot_reload.client.connect.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -96,7 +96,7 @@ return adzerk.boot_reload.client.connect.cljs$core$IFn$_invoke$arity$2((argument
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args9920.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args9220.length)].join('')));
 
 }
 });
