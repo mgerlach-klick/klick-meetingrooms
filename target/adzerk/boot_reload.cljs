@@ -1,0 +1,2 @@
+(ns adzerk.boot-reload (:require [adzerk.boot-reload.client :as client] meetingrooms.core))
+(client/connect "ws://localhost:55607" {:ws-host nil, :asset-host nil, :on-jsload (fn* [] (meetingrooms.core/main))})
