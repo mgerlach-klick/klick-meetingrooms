@@ -36,15 +36,16 @@
   (get-in @rooms [:rooms room-id]))
 
 (defn n-th [n]
-  (str n
-       (let [rem (mod n 100)]
-         (if (and (>= rem 11) (<= rem 13))
-           "th"
-           (condp = (mod n 10)
-             1 "st"
-             2 "nd"
-             3 "rd"
-             "th")))))
+  (when n
+    (str n
+         (let [rem (mod n 100)]
+           (if (and (>= rem 11) (<= rem 13))
+             "th"
+             (condp = (mod n 10)
+               1 "st"
+               2 "nd"
+               3 "rd"
+               "th"))))))
 
 (defn set-html! [el content]
   (aset el "innerHTML" content))
@@ -52,7 +53,15 @@
 (defn room-header [room]
   [:h4.header  {:style "display: inline" } (:name room)
    [:br.hide-on-med-and-up]
-   [:h5.grey-text  {:style "display: inline" } " (" (n-th (:floor room)) " " (:tower room) ")"]])
+   [:h5.grey-text  {:style "display: inline" }
+    " ("
+    (when (:floor room)
+      (str
+       (n-th (:floor room))
+       " "))
+    (when (:tower room)
+      (:tower room))
+    ")"]])
 
 (defn generate-room [room-id]
   (let [room (get-room room-id)]
@@ -96,7 +105,7 @@
 
   (-> (jquery ".slider")
       (.slider (clj->js {"full_width" false
-                         "indicators" (> (count (:pictures (get-room room-id))) 1)}))))
+                         "indicators" false}))))
 
 (defn ^:export set-room-id [room-id]
   (.setToken history (str "/room/" room-id)))

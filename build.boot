@@ -21,7 +21,10 @@
  '[adzerk.boot-cljs      :refer [cljs]]
  '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
  '[adzerk.boot-reload    :refer [reload]]
- '[pandeiro.boot-http    :refer [serve]])
+ '[pandeiro.boot-http    :refer [serve]]
+ )
+
+
 
 (deftask dev []
   (comp (serve :dir "target/")
@@ -35,4 +38,5 @@
 (deftask build []
   (comp
    (cljs :optimizations :advanced)
-   (target)))
+   (target)
+   ))

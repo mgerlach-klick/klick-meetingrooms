@@ -16,8 +16,12 @@
                 default: return "th";
                 }
             }
-            return ""+d+ending(d);
-        }
+            if (d){
+                return ""+d+ending(d);
+            } else {
+                return "";
+            }
+            }
 
         function setUpRooms(roomConfig) {
             meetingrooms.core.set_rooms(roomConfig);
@@ -27,11 +31,11 @@
             var roomChoices = _.flatten( _.map(roomKeys, function (roomId) {
                 var room = roomConfig.rooms[roomId];
                 var r = {};
-                var roomString = room.name + " (" + nth(room.floor) + ")";
+                var roomString = room.name + (room.floor ? (" (" + nth(room.floor) + ")") : "");
                 r[roomString] = roomId;
                 return [ r, _.map(room.aliases, function (alias) {
                     var r = {};
-                    var roomString = alias + " (" + nth(room.floor) + ")";
+                    var roomString = alias + (room.floor ? (" (" + nth(room.floor) + ")") : "");
                     r[roomString] = roomId;
                     return r;
                 })];
@@ -63,7 +67,6 @@
                     console.log(JSON.stringify(sortedByScore, null, 2));
                     return justValues;
                 },
-                limit: 5,
                 triggerOnSingleChoice: true
             });
 

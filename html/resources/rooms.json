@@ -15,7 +15,7 @@
                 ,"tower": "North"
                 ,"aliases": []
                 ,"pictures": ["blue7_1.jpg"]
-                ,"description": "Red is in the Klick Health / Editorial area of the 7th floor. Upon entering, go right, passing the lab on your right. When entering the editorial area, Blue is against the wall, by the printer, close to the corner"
+                ,"description": "Blue is in the Klick Health / Editorial area of the 7th floor. Upon entering, go right, passing the lab on your right. When entering the editorial area, Blue is against the wall, by the printer, close to the corner"
                 ,"moreinfo": null}
 
      ,"monet7": {"name": "Monet"
@@ -88,7 +88,7 @@
 
 
 
-     ,"pietmondrian13": {"name": "Piet Mondrian 1"
+     ,"pietmondrian1": {"name": "Piet Mondrian 1"
                          ,"floor": 3
                          ,"tower": "North"
                          ,"aliases": ["pm1", "Piet Mondrian Left"]
@@ -96,7 +96,7 @@
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM1 is the left-most one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
 
-     ,"pietmondrian13": {"name": "Piet Mondrian 2"
+     ,"pietmondrian2": {"name": "Piet Mondrian 2"
                          ,"floor": 3
                          ,"tower": "North"
                          ,"aliases": ["pm2", "Piet Mondrian Centre"]
@@ -104,7 +104,7 @@
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM2 is the centre one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
 
-     ,"pietmondrian13": {"name": "Piet Mondrian 3"
+     ,"pietmondrian3": {"name": "Piet Mondrian 3"
                          ,"floor": 3
                          ,"tower": "North"
                          ,"aliases": ["pm3", "Piet Mondrian Right"]
@@ -184,8 +184,17 @@
                 ,"tower": "North"
                 ,"aliases": []
                 ,"pictures": []
-                ,"description": "TODO"
+                ,"description": "I couldn't find it!"
                 ,"moreinfo": []}
+
+        ,"silver4": {"name": "Silver"
+                ,"floor": 4
+                ,"tower": "North"
+                ,"aliases": []
+                ,"pictures": []
+                ,"description": "I couldn't find it!"
+                ,"moreinfo": []}
+
 
      ,"emilycarr4": {"name": "Emily Carr"
                      ,"floor": 4
@@ -227,7 +236,7 @@
                   ,"description": "Yellow is one of a string of tiny meeting rooms along the inside of the 4th floor. Either take the entrance without the corridor that leads to Steve Willer's office and keep going right, or the opposite entrance with the corridor and keep going left. Yellow is the one closest to Steve Willer's office."
                   ,"moreinfo": []}
 
-     ,"silver4": {"name": "Orange"
+     ,"orange4": {"name": "Orange"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
@@ -235,7 +244,7 @@
                   ,"description": "Orange is one of a string of tiny meeting rooms along the inside of the 4th floor. Either take the entrance without the corridor that leads to Steve Willer's office and keep going right, or the opposite entrance with the corridor and keep going left. Orange is in the middle, between Purple and Silver."
                   ,"moreinfo": []}
 
-     ,"silver4": {"name": "Biggie"
+     ,"biggie4": {"name": "Biggie"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
@@ -243,7 +252,7 @@
                   ,"description": "Biggie is next to the Emily Carr by the Wellness centre. Use the non-corridor entrance of the 4th and take a right."
                   ,"moreinfo": []}
 
-     ,"silver4": {"name": "Smalls"
+     ,"smalls4": {"name": "Smalls"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
@@ -251,6 +260,15 @@
                   ,"description": "Take the entrance with the corridor in front of it, and then when you enter the Klick area of the floor, Smalls is immediately to your left'"
                   ,"moreinfo": []}
 
+
+
+       ,"criet0": {"name": "Criet"
+                  ,"floor": null
+                  ,"tower": "Lobby"
+                  ,"aliases": ["Lobby room"]
+                   ,"pictures": []
+                  ,"description": "The Criet board room is maintained by the building. It's located in the north tower lobby, behind and to the right of the security guys desk."
+                  ,"moreinfo": []}
 
 
     }
