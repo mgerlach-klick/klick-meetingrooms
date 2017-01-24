@@ -50,34 +50,49 @@
   (aset el "innerHTML" content))
 
 (defn room-header [room]
-  (str (:name room) " (" (n-th (:floor room)) " " (:tower room)")"))
+  [:h4.header  {:style "display: inline" } (:name room)
+   [:br.hide-on-med-and-up]
+   [:h5.grey-text  {:style "display: inline" } " (" (n-th (:floor room)) " " (:tower room) ")"]])
 
-(defn generate-room [room]
-  (prn room)
-  [:div
+(defn generate-room [room-id]
+  (let [room (get-room room-id)]
+    (prn room)
+    [:div
 
-   [:h4.header (room-header room)]
+     (room-header room)
 
-   (when-let [aliases (:aliases room)]
-     (when-not (empty? aliases)
-       [:p.grey-text "aka: " (apply str (interpose ", " aliases))]))
+     (when-let [aliases (:aliases room)]
+       (when-not (empty? aliases)
+         [:p.grey-text "aka: " (apply str (interpose ", " aliases))]))
 
-   [:div.section
-    [:p.flow-text
-     (:description room)]]
+     [:div.section
+      [:p.flow-text
+       (:description room)]]
 
-   (when-let [images (:pictures room)]
-     (when-not (empty? images)
-       [:div.slider
-        [:ul.slides
-         (for [img images]
-           [:li
-            [:img {:src (str "/resources/pics/" img)}]])]]))])
+     (when-let [images (:pictures room)]
+       (when-not (empty? images)
+         [:div.slider
+          [:ul.slides
+           (for [img images]
+             [:li
+              [:img {:src (str "/resources/pics/" img)}]])]]))
+
+     (when-let [more (:moreinfo room)]
+       (when-not (empty? more)
+         [:ul "More information:"
+          (for [info more]
+            [:li
+             [:a {:href info} info ]])]))
+
+     [:hr]
+     [:a.right {:href (str "mailto:mgerlach@klick.com?subject=Meetingrooms%20" room-id)}
+      "Contribute to make this page better!"]
+     ]))
 
 
 (defn show-room [el room-id]
   (set-html! el
-             (html (generate-room (get-room room-id))))
+             (html (generate-room room-id)))
 
   (-> (jquery ".slider")
       (.slider (clj->js {"full_width" false
@@ -90,15 +105,19 @@
   (show-room application (keyword room)))
 
 (defroute home-path "/" []
-  (set-html! application (html [p.flowtext "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result! I hope this is helpful! "])))
+  (set-html! application (html [:p.flow-text "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result! I hope this is helpful! "])))
 
 ;; Catch all
 (defroute "*" []
-  (set-html! application (html [p.flowtext "There doesn't seem to be anything here!"])))
+  (set-html! application (html [p.flow-text "There doesn't seem to be anything here!"])))
 
-(defn main
-  ""
-  []
+(defn ^:export go-to-fragment []
   (prn "reloading" (str window.location.hash))
   (secretary/dispatch! (str window.location.hash)) ;; for reloads
+  )
+
+
+(defn ^:export main
+  ""
+  []
   )

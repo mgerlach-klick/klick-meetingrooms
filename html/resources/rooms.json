@@ -91,23 +91,23 @@
      ,"pietmondrian13": {"name": "Piet Mondrian 1"
                          ,"floor": 3
                          ,"tower": "North"
-                         ,"aliases": ["pm1" "Piet Mondrian Left"]
+                         ,"aliases": ["pm1", "Piet Mondrian Left"]
                          ,"pictures": []
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM1 is the left-most one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
 
-          ,"pietmondrian13": {"name": "Piet Mondrian 2"
+     ,"pietmondrian13": {"name": "Piet Mondrian 2"
                          ,"floor": 3
                          ,"tower": "North"
-                         ,"aliases": ["pm2" "Piet Mondrian Centre"]
+                         ,"aliases": ["pm2", "Piet Mondrian Centre"]
                          ,"pictures": []
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM2 is the centre one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
 
-          ,"pietmondrian13": {"name": "Piet Mondrian 3"
+     ,"pietmondrian13": {"name": "Piet Mondrian 3"
                          ,"floor": 3
                          ,"tower": "North"
-                         ,"aliases": ["pm3" "Piet Mondrian Right"]
+                         ,"aliases": ["pm3", "Piet Mondrian Right"]
                          ,"pictures": []
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM3 is the right-most one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
@@ -119,121 +119,121 @@
 
 
 
-     ,"davinci2": {"name": "Davinci"
+     ,"davinci2": {"name": "DaVinci"
+                   ,"floor": 2
+                   ,"tower": "North"
+                   ,"aliases": []
+                   ,"pictures": []
+                   ,"description": ""
+                   ,"moreinfo": ["https://en.wikipedia.org/wiki/Leonardo_da_Vinci"]}
+
+     ,"lorioffice2": {"name": "Lori Grant's Office"
+                      ,"floor": 2
+                      ,"tower": "North"
+                      ,"aliases": []
+                      ,"pictures": []
+                      ,"description": ""
+                      ,"moreinfo": ["https://www.klick.com/health/author/lgrant/"]}
+
+     ,"Michaelangelo2": {"name": "Michaelangelo"
                          ,"floor": 2
                          ,"tower": "North"
-           ,"aliases": ["Da Vinci"]
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": ["https://en.wikipedia.org/wiki/Leonardo_da_Vinci"]}
+                         ,"aliases": []
+                         ,"pictures": []
+                         ,"description": ""
+                         ,"moreinfo": []}
 
-   ,"lorioffice2": {"name": "Lori Grant's Office"
+     ,"nta_boardroom2": {"name": "North Testing Area, Boardroom"
                          ,"floor": 2
                          ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": ["https://www.klick.com/health/author/lgrant/"]}
+                         ,"aliases": []
+                         ,"pictures": []
+                         ,"description": ""
+                         ,"moreinfo": []}
 
-   ,"Michaelangelo2": {"name": "Michaelangelo"
-                         ,"floor": 2
-                         ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"nta_lounge2": {"name": "North Testing Area, Lounge"
+                      ,"floor": 2
+                      ,"tower": "North"
+                      ,"aliases": []
+                      ,"pictures": []
+                      ,"description": ""
+                      ,"moreinfo": []}
 
-   ,"nta_boardroom2": {"name": "North Testing Area, Boardroom"
-                         ,"floor": 2
-                         ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
-
-   ,"nta_lounge2": {"name": "North Testing Area, Lounge"
-                         ,"floor": 2
-                         ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
-
-   ,"jonimitchell2": {"name": "Joni Mitchell"
-                         ,"floor": 2
-                         ,"tower": "South"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": ["https://en.wikipedia.org/wiki/Joni_Mitchell"]}
+     ,"jonimitchell2": {"name": "Joni Mitchell"
+                        ,"floor": 2
+                        ,"tower": "South"
+                        ,"aliases": []
+                        ,"pictures": []
+                        ,"description": ""
+                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Joni_Mitchell"]}
 
 
 
 
 
      ,"banksy4": {"name": "Banksy"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": ["https://en.wikipedia.org/wiki/Banksy"]}
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": []
+                  ,"description": ""
+                  ,"moreinfo": ["https://en.wikipedia.org/wiki/Banksy"]}
 
-   ,"cyan4": {"name": "Cyan"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"cyan4": {"name": "Cyan"
+                ,"floor": 4
+                ,"tower": "North"
+                ,"aliases": []
+                ,"pictures": []
+                ,"description": ""
+                ,"moreinfo": []}
 
-   ,"emilycarr4": {"name": "Emily Carr"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": "Emily Carr is opposite of the Wellness Centre on the 4th floor. It's very close to the C-level offices."
-           ,"moreinfo": ["https://en.wikipedia.org/wiki/Emily_Carr"]}
+     ,"emilycarr4": {"name": "Emily Carr"
+                     ,"floor": 4
+                     ,"tower": "North"
+                     ,"aliases": []
+                     ,"pictures": []
+                     ,"description": "Emily Carr is opposite of the Wellness Centre on the 4th floor. It's very close to the C-level offices."
+                     ,"moreinfo": ["https://en.wikipedia.org/wiki/Emily_Carr"]}
 
-   ,"purple4": {"name": "Purple"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"purple4": {"name": "Purple"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": []
+                  ,"description": ""
+                  ,"moreinfo": []}
 
-   ,"warhol4": {"name": "Warhol"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": ["https://en.wikipedia.org/wiki/Andy_Warhol"]}
+     ,"warhol4": {"name": "Warhol"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": []
+                  ,"description": ""
+                  ,"moreinfo": ["https://en.wikipedia.org/wiki/Andy_Warhol"]}
 
-   ,"wellnesscenter4": {"name": "Wellness Center"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"wellnesscenter4": {"name": "Wellness Center"
+                          ,"floor": 4
+                          ,"tower": "North"
+                          ,"aliases": []
+                          ,"pictures": []
+                          ,"description": ""
+                          ,"moreinfo": []}
 
-   ,"yellow4": {"name": "Yellow"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"yellow4": {"name": "Yellow"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": []
+                  ,"description": ""
+                  ,"moreinfo": []}
 
-   ,"silver4": {"name": "Silver"
-           ,"floor": 4
-           ,"tower": "North"
-           ,"aliases": []
-           ,"pictures": []
-           ,"description": ""
-           ,"moreinfo": []}
+     ,"silver4": {"name": "Silver"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": []
+                  ,"description": ""
+                  ,"moreinfo": []}
 
 
 

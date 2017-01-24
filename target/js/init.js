@@ -21,6 +21,7 @@
 
         function setUpRooms(roomConfig) {
             meetingrooms.core.set_rooms(roomConfig);
+            meetingrooms.core.go_to_fragment(); //load room from fragment if direct link
 
             var roomKeys = _.keys(roomConfig.rooms);
             var roomChoices = _.flatten( _.map(roomKeys, function (roomId) {
@@ -75,6 +76,7 @@
             setUpRooms(roomConfig);
             console.log("set up rooms");
         });
+
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
