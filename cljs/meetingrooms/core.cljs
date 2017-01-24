@@ -105,7 +105,10 @@
   (show-room application (keyword room)))
 
 (defroute home-path "/" []
-  (set-html! application (html [:p.flow-text "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result! I hope this is helpful! "])))
+  (set-html! application (html [:span
+                                [:p.section.flow-text "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result!"]
+                                [:p.section.flow-text "Feel free to link directly to the URLs of the meeting rooms, I will keep the URLs stable."]
+                                [:p.section.flow-text "Please also help by contributing to this site by offering corrections, better instructions, additions, comments, and all that. There is a link through which you can email at the bottom of every page."]])))
 
 ;; Catch all
 (defroute "*" []

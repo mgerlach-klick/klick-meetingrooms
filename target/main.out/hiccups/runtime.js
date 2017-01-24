@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.9.293 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.9.293 {}
 goog.provide('hiccups.runtime');
 goog.require('cljs.core');
 goog.require('clojure.string');
@@ -16,85 +16,85 @@ hiccups.runtime.character_escapes = new cljs.core.PersistentArrayMap(null, 4, ["
 hiccups.runtime.container_tags = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 33, ["table",null,"canvas",null,"body",null,"h3",null,"dt",null,"label",null,"fieldset",null,"form",null,"em",null,"option",null,"h2",null,"h4",null,"style",null,"span",null,"script",null,"ol",null,"dd",null,"a",null,"head",null,"textarea",null,"i",null,"div",null,"b",null,"h5",null,"pre",null,"ul",null,"iframe",null,"strong",null,"html",null,"h1",null,"li",null,"dl",null,"h6",null], null), null);
 hiccups.runtime.as_str = (function hiccups$runtime$as_str(x){
 if(((x instanceof cljs.core.Keyword)) || ((x instanceof cljs.core.Symbol))){
-return cljs.core.name(x);
+return cljs.core.name.call(null,x);
 } else {
 return [cljs.core.str(x)].join('');
 }
 });
-hiccups.runtime._STAR_html_mode_STAR_ = cljs.core.cst$kw$xml;
+hiccups.runtime._STAR_html_mode_STAR_ = new cljs.core.Keyword(null,"xml","xml",-1170142052);
 hiccups.runtime.xml_mode_QMARK_ = (function hiccups$runtime$xml_mode_QMARK_(){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(hiccups.runtime._STAR_html_mode_STAR_,cljs.core.cst$kw$xml);
+return cljs.core._EQ_.call(null,hiccups.runtime._STAR_html_mode_STAR_,new cljs.core.Keyword(null,"xml","xml",-1170142052));
 });
 hiccups.runtime.in_mode = (function hiccups$runtime$in_mode(mode,f){
-var _STAR_html_mode_STAR_14451 = hiccups.runtime._STAR_html_mode_STAR_;
+var _STAR_html_mode_STAR_9943 = hiccups.runtime._STAR_html_mode_STAR_;
 hiccups.runtime._STAR_html_mode_STAR_ = mode;
 
-try{return (f.cljs$core$IFn$_invoke$arity$0 ? f.cljs$core$IFn$_invoke$arity$0() : f.call(null));
-}finally {hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR_14451;
+try{return f.call(null);
+}finally {hiccups.runtime._STAR_html_mode_STAR_ = _STAR_html_mode_STAR_9943;
 }});
 /**
  * Change special characters into HTML character entities.
  */
 hiccups.runtime.escape_html = (function hiccups$runtime$escape_html(text){
-return clojure.string.escape(hiccups.runtime.as_str(text),hiccups.runtime.character_escapes);
+return clojure.string.escape.call(null,hiccups.runtime.as_str.call(null,text),hiccups.runtime.character_escapes);
 });
 hiccups.runtime.h = hiccups.runtime.escape_html;
 hiccups.runtime.end_tag = (function hiccups$runtime$end_tag(){
-if(cljs.core.truth_(hiccups.runtime.xml_mode_QMARK_())){
+if(cljs.core.truth_(hiccups.runtime.xml_mode_QMARK_.call(null))){
 return " />";
 } else {
 return ">";
 }
 });
 hiccups.runtime.xml_attribute = (function hiccups$runtime$xml_attribute(name,value){
-return [cljs.core.str(" "),cljs.core.str(hiccups.runtime.as_str(name)),cljs.core.str("=\""),cljs.core.str(hiccups.runtime.escape_html(value)),cljs.core.str("\"")].join('');
+return [cljs.core.str(" "),cljs.core.str(hiccups.runtime.as_str.call(null,name)),cljs.core.str("=\""),cljs.core.str(hiccups.runtime.escape_html.call(null,value)),cljs.core.str("\"")].join('');
 });
-hiccups.runtime.render_attribute = (function hiccups$runtime$render_attribute(p__14452){
-var vec__14456 = p__14452;
-var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14456,(0),null);
-var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14456,(1),null);
+hiccups.runtime.render_attribute = (function hiccups$runtime$render_attribute(p__9944){
+var vec__9948 = p__9944;
+var name = cljs.core.nth.call(null,vec__9948,(0),null);
+var value = cljs.core.nth.call(null,vec__9948,(1),null);
 if(value === true){
-if(cljs.core.truth_(hiccups.runtime.xml_mode_QMARK_())){
-return hiccups.runtime.xml_attribute(name,name);
+if(cljs.core.truth_(hiccups.runtime.xml_mode_QMARK_.call(null))){
+return hiccups.runtime.xml_attribute.call(null,name,name);
 } else {
-return [cljs.core.str(" "),cljs.core.str(hiccups.runtime.as_str(name))].join('');
+return [cljs.core.str(" "),cljs.core.str(hiccups.runtime.as_str.call(null,name))].join('');
 }
 } else {
-if(cljs.core.not(value)){
+if(cljs.core.not.call(null,value)){
 return "";
 } else {
-return hiccups.runtime.xml_attribute(name,value);
+return hiccups.runtime.xml_attribute.call(null,name,value);
 
 }
 }
 });
 hiccups.runtime.render_attr_map = (function hiccups$runtime$render_attr_map(attrs){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.sort.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(hiccups.runtime.render_attribute,attrs)));
+return cljs.core.apply.call(null,cljs.core.str,cljs.core.sort.call(null,cljs.core.map.call(null,hiccups.runtime.render_attribute,attrs)));
 });
 /**
  * Ensure a tag vector is of the form [tag-name attrs content].
  */
-hiccups.runtime.normalize_element = (function hiccups$runtime$normalize_element(p__14459){
-var vec__14466 = p__14459;
-var seq__14467 = cljs.core.seq(vec__14466);
-var first__14468 = cljs.core.first(seq__14467);
-var seq__14467__$1 = cljs.core.next(seq__14467);
-var tag = first__14468;
-var content = seq__14467__$1;
+hiccups.runtime.normalize_element = (function hiccups$runtime$normalize_element(p__9951){
+var vec__9958 = p__9951;
+var seq__9959 = cljs.core.seq.call(null,vec__9958);
+var first__9960 = cljs.core.first.call(null,seq__9959);
+var seq__9959__$1 = cljs.core.next.call(null,seq__9959);
+var tag = first__9960;
+var content = seq__9959__$1;
 if(!(((tag instanceof cljs.core.Keyword)) || ((tag instanceof cljs.core.Symbol)) || (typeof tag === 'string'))){
 throw [cljs.core.str(tag),cljs.core.str(" is not a valid tag name")].join('');
 } else {
 }
 
-var vec__14469 = cljs.core.re_matches(hiccups.runtime.re_tag,hiccups.runtime.as_str(tag));
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14469,(0),null);
-var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14469,(1),null);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14469,(2),null);
-var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14469,(3),null);
-var tag_attrs = new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$id,id,cljs.core.cst$kw$class,(cljs.core.truth_(class$)?clojure.string.replace(class$,"."," "):null)], null);
-var map_attrs = cljs.core.first(content);
-if(cljs.core.map_QMARK_(map_attrs)){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [tag__$1,cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([tag_attrs,map_attrs], 0)),cljs.core.next(content)], null);
+var vec__9961 = cljs.core.re_matches.call(null,hiccups.runtime.re_tag,hiccups.runtime.as_str.call(null,tag));
+var _ = cljs.core.nth.call(null,vec__9961,(0),null);
+var tag__$1 = cljs.core.nth.call(null,vec__9961,(1),null);
+var id = cljs.core.nth.call(null,vec__9961,(2),null);
+var class$ = cljs.core.nth.call(null,vec__9961,(3),null);
+var tag_attrs = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"id","id",-1388402092),id,new cljs.core.Keyword(null,"class","class",-2030961996),(cljs.core.truth_(class$)?clojure.string.replace.call(null,class$,"."," "):null)], null);
+var map_attrs = cljs.core.first.call(null,content);
+if(cljs.core.map_QMARK_.call(null,map_attrs)){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [tag__$1,cljs.core.merge.call(null,tag_attrs,map_attrs),cljs.core.next.call(null,content)], null);
 } else {
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [tag__$1,tag_attrs,content], null);
 }
@@ -103,34 +103,36 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  * Render a tag vector as a HTML element.
  */
 hiccups.runtime.render_element = (function hiccups$runtime$render_element(element){
-var vec__14475 = hiccups.runtime.normalize_element(element);
-var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14475,(0),null);
-var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14475,(1),null);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14475,(2),null);
+var vec__9967 = hiccups.runtime.normalize_element.call(null,element);
+var tag = cljs.core.nth.call(null,vec__9967,(0),null);
+var attrs = cljs.core.nth.call(null,vec__9967,(1),null);
+var content = cljs.core.nth.call(null,vec__9967,(2),null);
 if(cljs.core.truth_((function (){var or__7492__auto__ = content;
 if(cljs.core.truth_(or__7492__auto__)){
 return or__7492__auto__;
 } else {
-return (hiccups.runtime.container_tags.cljs$core$IFn$_invoke$arity$1 ? hiccups.runtime.container_tags.cljs$core$IFn$_invoke$arity$1(tag) : hiccups.runtime.container_tags.call(null,tag));
+return hiccups.runtime.container_tags.call(null,tag);
 }
 })())){
-return [cljs.core.str("<"),cljs.core.str(tag),cljs.core.str(hiccups.runtime.render_attr_map(attrs)),cljs.core.str(">"),cljs.core.str((hiccups.runtime.render_html.cljs$core$IFn$_invoke$arity$1 ? hiccups.runtime.render_html.cljs$core$IFn$_invoke$arity$1(content) : hiccups.runtime.render_html.call(null,content))),cljs.core.str("</"),cljs.core.str(tag),cljs.core.str(">")].join('');
+return [cljs.core.str("<"),cljs.core.str(tag),cljs.core.str(hiccups.runtime.render_attr_map.call(null,attrs)),cljs.core.str(">"),cljs.core.str(hiccups.runtime.render_html.call(null,content)),cljs.core.str("</"),cljs.core.str(tag),cljs.core.str(">")].join('');
 } else {
-return [cljs.core.str("<"),cljs.core.str(tag),cljs.core.str(hiccups.runtime.render_attr_map(attrs)),cljs.core.str(hiccups.runtime.end_tag())].join('');
+return [cljs.core.str("<"),cljs.core.str(tag),cljs.core.str(hiccups.runtime.render_attr_map.call(null,attrs)),cljs.core.str(hiccups.runtime.end_tag.call(null))].join('');
 }
 });
 /**
  * Turn a Clojure data type into a string of HTML.
  */
 hiccups.runtime.render_html = (function hiccups$runtime$render_html(x){
-if(cljs.core.vector_QMARK_(x)){
-return hiccups.runtime.render_element(x);
+if(cljs.core.vector_QMARK_.call(null,x)){
+return hiccups.runtime.render_element.call(null,x);
 } else {
-if(cljs.core.seq_QMARK_(x)){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.map.cljs$core$IFn$_invoke$arity$2(hiccups.runtime.render_html,x));
+if(cljs.core.seq_QMARK_.call(null,x)){
+return cljs.core.apply.call(null,cljs.core.str,cljs.core.map.call(null,hiccups.runtime.render_html,x));
 } else {
-return hiccups.runtime.as_str(x);
+return hiccups.runtime.as_str.call(null,x);
 
 }
 }
 });
+
+//# sourceMappingURL=runtime.js.map

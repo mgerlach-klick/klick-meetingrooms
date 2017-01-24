@@ -123,40 +123,40 @@
                    ,"floor": 2
                    ,"tower": "North"
                    ,"aliases": []
-                   ,"pictures": []
-                   ,"description": ""
+                   ,"pictures": ["davinci2_1.jpg"]
+                   ,"description": "Enter the 2nd floor through the non-testing area entrance. Go left, and DaVinci is right by the blue 'Decoded Book' wall. "
                    ,"moreinfo": ["https://en.wikipedia.org/wiki/Leonardo_da_Vinci"]}
 
      ,"lorioffice2": {"name": "Lori Grant's Office"
                       ,"floor": 2
                       ,"tower": "North"
                       ,"aliases": []
-                      ,"pictures": []
-                      ,"description": ""
+                      ,"pictures": ["lorigrantoffice2_1.jpg"]
+                      ,"description": "Enter the 2nd floor through the non-testing area entrance (it looks more orange!). Lori Grant's office is all the way in the corner to your left, past the big blue 'Decoded Book' wall. Alternatively, enter through the testing area entrance, go around the corner right, and then it'll be tucked in the corner to your left."
                       ,"moreinfo": ["https://www.klick.com/health/author/lgrant/"]}
 
      ,"Michaelangelo2": {"name": "Michaelangelo"
                          ,"floor": 2
                          ,"tower": "North"
-                         ,"aliases": []
-                         ,"pictures": []
-                         ,"description": ""
-                         ,"moreinfo": []}
+                         ,"aliases": ["Michelangelo"]
+                         ,"pictures": ["michaelangelo2_1.jpg"]
+                         ,"description": "Michaelangelo is a big meeting room right next to the facilities area on the 2nd floor. Enter through the testing area entrance (the blue looking one!) and it'll be right on your left."
+                         ,"moreinfo": ["https://en.wikipedia.org/wiki/Michelangelo"]}
 
      ,"nta_boardroom2": {"name": "North Testing Area, Boardroom"
                          ,"floor": 2
                          ,"tower": "North"
                          ,"aliases": []
-                         ,"pictures": []
-                         ,"description": ""
+                         ,"pictures": ["nta_boardroom_lounge2_1.jpg"]
+                         ,"description": "Take the 2nd floor testing area entrance (the blue looking one!) and the board room is right before the door that actually enters the 2nd floor Klick area."
                          ,"moreinfo": []}
 
      ,"nta_lounge2": {"name": "North Testing Area, Lounge"
                       ,"floor": 2
                       ,"tower": "North"
                       ,"aliases": []
-                      ,"pictures": []
-                      ,"description": ""
+                      ,"pictures": ["nta_boardroom_lounge2_1.jpg"]
+                      ,"description": "Take the 2nd floor testing area entrance (the blue looking one!) and the lounge is the first room on the left on your way to the door"
                       ,"moreinfo": []}
 
      ,"jonimitchell2": {"name": "Joni Mitchell"
@@ -164,7 +164,7 @@
                         ,"tower": "South"
                         ,"aliases": []
                         ,"pictures": []
-                        ,"description": ""
+                        ,"description": "Somebody please provide me with instructions :)"
                         ,"moreinfo": ["https://en.wikipedia.org/wiki/Joni_Mitchell"]}
 
 
@@ -175,8 +175,8 @@
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
-                  ,"pictures": []
-                  ,"description": ""
+                  ,"pictures": ["banksy4_1.jpg"]
+                  ,"description": "Banksy is just left of Steve Willer's office. Enter the 4th floor through the entrance that doesn't have a corridor by it, and it's straight ahead to your left."
                   ,"moreinfo": ["https://en.wikipedia.org/wiki/Banksy"]}
 
      ,"cyan4": {"name": "Cyan"
@@ -184,23 +184,23 @@
                 ,"tower": "North"
                 ,"aliases": []
                 ,"pictures": []
-                ,"description": ""
+                ,"description": "TODO"
                 ,"moreinfo": []}
 
      ,"emilycarr4": {"name": "Emily Carr"
                      ,"floor": 4
                      ,"tower": "North"
                      ,"aliases": []
-                     ,"pictures": []
-                     ,"description": "Emily Carr is opposite of the Wellness Centre on the 4th floor. It's very close to the C-level offices."
+                     ,"pictures": ["emilycarr4_1.jpg"]
+                     ,"description": "Emily Carr is opposite of the Wellness Centre on the 4th floor. It's very close to the C-level offices. Use either the main entrance with the corridor and take a right, or go past the wash rooms to the entrance closest to Aaron Goldstein's office and go left."
                      ,"moreinfo": ["https://en.wikipedia.org/wiki/Emily_Carr"]}
 
      ,"purple4": {"name": "Purple"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
-                  ,"pictures": []
-                  ,"description": ""
+                  ,"pictures": ["purpleorangeyellow4_1.jpg"]
+                  ,"description": "Purple is one of a string of tiny meeting rooms along the inside of the 4th floor. Either take the entrance without the corridor that leads to Steve Willer's office and keep going right, or the opposite entrance with the corridor and keep going left. Purple is the room closest to the corridor-entrance."
                   ,"moreinfo": []}
 
      ,"warhol4": {"name": "Warhol"
@@ -215,24 +215,40 @@
                           ,"floor": 4
                           ,"tower": "North"
                           ,"aliases": []
-                          ,"pictures": []
-                          ,"description": ""
+                          ,"pictures": ["wellnesscenter4_1.jpg", "wellnesscenter4_2.jpg"]
+                          ,"description": "The Wellness Center is by Leerom Segal's office. On the 4th floor, take the entrance with the corridor in front of it and keep right. I don't know why this is a bookable meeting room."
                           ,"moreinfo": []}
 
      ,"yellow4": {"name": "Yellow"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
-                  ,"pictures": []
-                  ,"description": ""
+                  ,"pictures": ["purpleorangeyellow4_1.jpg"]
+                  ,"description": "Yellow is one of a string of tiny meeting rooms along the inside of the 4th floor. Either take the entrance without the corridor that leads to Steve Willer's office and keep going right, or the opposite entrance with the corridor and keep going left. Yellow is the one closest to Steve Willer's office."
                   ,"moreinfo": []}
 
-     ,"silver4": {"name": "Silver"
+     ,"silver4": {"name": "Orange"
                   ,"floor": 4
                   ,"tower": "North"
                   ,"aliases": []
-                  ,"pictures": []
-                  ,"description": ""
+                  ,"pictures": ["purpleorangeyellow4_1.jpg"]
+                  ,"description": "Orange is one of a string of tiny meeting rooms along the inside of the 4th floor. Either take the entrance without the corridor that leads to Steve Willer's office and keep going right, or the opposite entrance with the corridor and keep going left. Orange is in the middle, between Purple and Silver."
+                  ,"moreinfo": []}
+
+     ,"silver4": {"name": "Biggie"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": ["biggie4_1.jpg"]
+                  ,"description": "Biggie is next to the Emily Carr by the Wellness centre. Use the non-corridor entrance of the 4th and take a right."
+                  ,"moreinfo": []}
+
+     ,"silver4": {"name": "Smalls"
+                  ,"floor": 4
+                  ,"tower": "North"
+                  ,"aliases": []
+                  ,"pictures": ["smalls4_1.jpg"]
+                  ,"description": "Take the entrance with the corridor in front of it, and then when you enter the Klick area of the floor, Smalls is immediately to your left'"
                   ,"moreinfo": []}
 
 
