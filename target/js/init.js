@@ -16,12 +16,8 @@
                 default: return "th";
                 }
             }
-            if (d){
-                return ""+d+ending(d);
-            } else {
-                return "";
-            }
-            }
+            return ""+d+ending(d);
+        }
 
         function setUpRooms(roomConfig) {
             meetingrooms.core.set_rooms(roomConfig);
@@ -31,11 +27,11 @@
             var roomChoices = _.flatten( _.map(roomKeys, function (roomId) {
                 var room = roomConfig.rooms[roomId];
                 var r = {};
-                var roomString = room.name + (room.floor ? (" (" + nth(room.floor) + ")") : "");
+                var roomString = room.name + " (" + nth(room.floor) + ")";
                 r[roomString] = roomId;
                 return [ r, _.map(room.aliases, function (alias) {
                     var r = {};
-                    var roomString = alias + (room.floor ? (" (" + nth(room.floor) + ")") : "");
+                    var roomString = alias + " (" + nth(room.floor) + ")";
                     r[roomString] = roomId;
                     return r;
                 })];
@@ -52,9 +48,9 @@
                 matcher: function(value,list) { // fuzzy string match
                     var withScore = _.reduce(list,function(acc,el) {
                         var score = el.score(value);
-                        if (score > 0.105){
+                        if (score > 0.25){
                             acc.push({id: el,
-                                      score: score });
+                                      scere: score });
                             return acc;
                         } else {
                             return acc;
@@ -67,6 +63,7 @@
                     console.log(JSON.stringify(sortedByScore, null, 2));
                     return justValues;
                 },
+                limit: 5,
                 triggerOnSingleChoice: true
             });
 
