@@ -112,6 +112,16 @@
                          ,"description": "The PM board rooms are right behind the reception desk on the 3rd floor. PM3 is the right-most one"
                          ,"moreinfo": ["https://en.wikipedia.org/wiki/Piet_Mondrian"]}
 
+     ,"salvadordali3": {"name": "Salvador Dali"
+                         ,"floor": 3
+                         ,"tower": "North"
+                        ,"aliases": []
+                         ,"pictures": ["salvadordali3_1.jpg"]
+                        ,"description": "The Salvador Dali is in the Genome and Sensei area. Enter the 3rd Floor North Tower on the reception side, turn right when facing reception, and it will be against the middle of the left wall (past the library)."
+                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Salvador_Dalí"]}
+
+
+
 
 
 
@@ -250,7 +260,7 @@
                   ,"aliases": []
                   ,"pictures": ["biggie4_1.jpg"]
                   ,"description": "Biggie is next to the Emily Carr by the Wellness centre. Use the non-corridor entrance of the 4th and take a right."
-                  ,"moreinfo": []}
+                  ,"moreinfo": ["https://en.wikipedia.org/wiki/The_Notorious_B.I.G."]}
 
      ,"smalls4": {"name": "Smalls"
                   ,"floor": 4
@@ -258,7 +268,7 @@
                   ,"aliases": []
                   ,"pictures": ["smalls4_1.jpg"]
                   ,"description": "Take the entrance with the corridor in front of it, and then when you enter the Klick area of the floor, Smalls is immediately to your left'"
-                  ,"moreinfo": []}
+                  ,"moreinfo": ["https://en.wikipedia.org/wiki/The_Notorious_B.I.G."]}
 
 
 
@@ -269,6 +279,16 @@
                    ,"pictures": []
                   ,"description": "The Criet board room is maintained by the building. It's located in the north tower lobby, behind and to the right of the security guys desk."
                   ,"moreinfo": []}
+
+
+
+     ,"offsite18": {"name": "18th Floor South"
+                    ,"floor": 18
+                    ,"tower": "South"
+                    ,"aliases": []
+                    ,"pictures": []
+                    ,"description": "Suite 1802 on the 18th Floor of the South Tower. Somebody please help with some instructions and photos!"
+                    ,"moreinfo": []}
 
 
     }

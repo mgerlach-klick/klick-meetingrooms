@@ -58,7 +58,6 @@
                         $autocomplete.empty();
 
                         // Handle onAutocomplete callback.
-                        console.log(options.onAutocomplete);
                         if (typeof(options.onAutocomplete) === "function") {
                             options.onAutocomplete.call(this, text);
                         }
@@ -81,7 +80,6 @@
 
                         // Check if the input isn't empty
                         if (val !== '') {
-                            console.log("val:"+val);
                             var suggestions = matcher(val, _.keys(options.data));
                             var cappedSuggestions = _.take(suggestions, options.limit);
                             _.each(cappedSuggestions, function (suggestion) {

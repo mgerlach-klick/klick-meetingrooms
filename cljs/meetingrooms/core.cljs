@@ -11,7 +11,7 @@
 
 (enable-console-print!)
 
-(defonce history (doto (History.)
+(defonce history (doto (History. false)
                     (events/listen
                      EventType/NAVIGATE
                      (fn [event]
@@ -65,7 +65,6 @@
 
 (defn generate-room [room-id]
   (let [room (get-room room-id)]
-    (prn room)
     [:div
 
      (room-header room)
@@ -100,12 +99,17 @@
 
 
 (defn show-room [el room-id]
-  (set-html! el
-             (html (generate-room room-id)))
+  ;; that way this is in the same animation frame and the indicator doesn't flicker
+  (js/setTimeout (fn []
+                   (set-html! el (html (generate-room room-id)))
 
-  (-> (jquery ".slider")
-      (.slider (clj->js {"full_width" false
-                         "indicators" false}))))
+                   (-> (jquery ".slider")
+                       (.slider (clj->js {"full_width" false
+                                          "indicators" (-> (get-room room-id)
+                                                           :pictures
+                                                           count
+                                                           (> 1))}))))
+                 0))
 
 (defn ^:export set-room-id [room-id]
   (.setToken history (str "/room/" room-id)))
@@ -116,15 +120,17 @@
 (defroute home-path "/" []
   (set-html! application (html [:span
                                 [:p.section.flow-text "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result!"]
+                                [:p.section.flow-text "If you prefer a map with all the rooms take a look at the " [:a {:href "https://genome.klick.com/map/index.html#/"} "Seating Map"]]
                                 [:p.section.flow-text "Feel free to link directly to the URLs of the meeting rooms, I will keep the URLs stable."]
-                                [:p.section.flow-text "Please also help by contributing to this site by offering corrections, better instructions, additions, comments, and all that. There is a link through which you can email at the bottom of every page."]])))
+                                [:p.section.flow-text "Please also help by contributing to this site by offering corrections, better instructions, additions, comments, and all that. There is a link through which you can email at the bottom of every page."]
+                                ])))
 
 ;; Catch all
 (defroute "*" []
-  (set-html! application (html [p.flow-text "There doesn't seem to be anything here!"])))
+  (set-html! application (html [p.flow-text "This doesn't look like anything to me..."])))
 
 (defn ^:export go-to-fragment []
-  (prn "reloading" (str window.location.hash))
+  (js/console.log "reloading" (str window.location.hash))
   (secretary/dispatch! (str window.location.hash)) ;; for reloads
   )
 

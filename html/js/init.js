@@ -40,13 +40,11 @@
                     return r;
                 })];
             }));
-            console.log("loaded "+ roomConfig.rooms.length + " meeting rooms!");
             rooms = _.extend.apply(this, roomChoices);
 
             $('input.autocomplete').autocomplete({
                 data: rooms,
                 onAutocomplete: function(id){
-                    console.log("GOING TO "+rooms[id]);
                     meetingrooms.core.set_room_id(rooms[id]);
                 },
                 matcher: function(value,list) { // fuzzy string match
@@ -64,7 +62,6 @@
 	                      return record.score;
 	                  });
                     var justValues = _.pluck(sortedByScore, "id");
-                    console.log(JSON.stringify(sortedByScore, null, 2));
                     return justValues;
                 },
                 triggerOnSingleChoice: true
