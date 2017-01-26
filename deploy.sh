@@ -1,1 +1,1 @@
-aws s3 sync target/ s3://klick-meetingrooms --acl public-read
+aws s3 sync target/ s3://rooms.klick.com --acl public-read
