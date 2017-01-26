@@ -1,15 +1,14 @@
-Structure:
+# Klick Meeting Room Finder
 
-- identifier ("for emails, etc")
-- Canonical name
-- Aliases ("main boardroom", "pm centre")
-- Links ("who was piet montrian?")
-- map coordinates
-- description
-- images
-- floor
+Live version: <http://rooms.klick.com>
 
-site:
-top: searchbar. typing opens a dropdown with a fuzzy match. As soon as a dropdown item is clicked, or only one completion is left, the content loads below
 
-content: shows normal-language description of how to get to the room. Then pictures. Below extra info, and 'improve this' link.
+# Development
+- Install boot
+- run `boot dev`
+
+# Deployment
+- Make sure the pictures are in the correct format and size: `html/resources/pics/prepare-photos.sh`
+- Lint the json to make sure that didn't get messed up: `jsonlint html/resources/rooms.json`
+- Build the clojurescript: `boot build`
+- Deploy to S3: `./deploy.sh`
