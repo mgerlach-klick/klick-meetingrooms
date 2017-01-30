@@ -1,4 +1,3 @@
-var $ = function() {};
-var jQuery = $;
-jQuery.prototype.slider = function() {};
-jQuery.slider = function() {};
+var jQuery = function(sel){};
+jQuery.prototype.slider = function(args) {};
+jQuery.slider = function(args) {};

@@ -22,7 +22,8 @@
 
 (defonce rooms (atom {}))
 
-(def jquery (js* "$"))
+(defn jquery [sel]
+  (js/jQuery sel))
 
 (def application
   (js/document.getElementById "app"))
