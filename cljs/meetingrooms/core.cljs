@@ -109,7 +109,9 @@
                                           "indicators" (-> (get-room room-id)
                                                            :pictures
                                                            count
-                                                           (> 1))}))))
+                                                           (> 1))})))
+                   (js/window.scrollTo 0 0)
+                   )
                  0))
 
 (defn ^:export set-room-id [room-id]
