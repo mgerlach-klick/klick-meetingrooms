@@ -77,6 +77,7 @@
             console.log("set up rooms");
         });
 
+        $('input.autocomplete').focus();
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
