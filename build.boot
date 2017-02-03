@@ -7,6 +7,7 @@
                           [weasel                  "0.7.0"  :scope "test"]
                           [org.clojure/tools.nrepl "0.2.12" :scope "test"]
                           [pandeiro/boot-http "0.7.6"]
+                          [onetom/boot-lein-generate "0.1.3" :scope "test"] ;; cursive needs a project.clj
                           ;;---
                           [cljs-ajax "0.5.8"]
                           [secretary "1.2.3"]
@@ -16,6 +17,8 @@
           :source-paths #{"cljs"}
           :resource-paths #{"html"})
 
+(require 'boot.lein)
+(boot.lein/generate)
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]

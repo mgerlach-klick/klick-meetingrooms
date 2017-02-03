@@ -145,7 +145,7 @@
                       ,"description": "Enter the 2nd floor through the non-testing area entrance (it looks more orange!). Lori Grant's office is all the way in the corner to your left, past the big blue 'Decoded Book' wall. Alternatively, enter through the testing area entrance, go around the corner right, and then it'll be tucked in the corner to your left."
                       ,"moreinfo": ["https://www.klick.com/health/author/lgrant/"]}
 
-     ,"Michaelangelo2": {"name": "Michaelangelo"
+     ,"michaelangelo2": {"name": "Michaelangelo"
                          ,"floor": 2
                          ,"tower": "North"
                          ,"aliases": ["Michelangelo"]
@@ -285,10 +285,19 @@
      ,"offsite18": {"name": "18th Floor South"
                     ,"floor": 18
                     ,"tower": "South"
-                    ,"aliases": []
-                    ,"pictures": []
-                    ,"description": "Suite 1802 on the 18th Floor of the South Tower. Somebody please help with some instructions and photos!"
+                    ,"aliases": ["18th Floor Offsite Meeting Room"]
+                    ,"pictures": ["offsite18_1.jpg", "offsite18_2.jpg"]
+                    ,"description": "Suite 1802 on the 18th Floor of the South Tower. You need your Klick security passcard to unlock the door!"
+                    ,"about": "The 18th Floor South Tower is a spacious room devoted to large internal and client meetings or workshops. The room is equipped with a large LED screen, a collaborative glass wall, typical workshop supplies and furniture that can accommodate flexible meeting configurations. And the views are fantastic!"
                     ,"moreinfo": []}
+
+     ,"pingpong8": {"name": "Ping Pong table"
+                    ,"floor": 8
+                    ,"tower": "South"
+                    ,"aliases": []
+                    ,"pictures": ["pingpong8_1.jpg", "pingpong8_2.jpg", "pingpong8_3.jpg"]
+                    ,"description": "The ping pong table room is on the 8th floor of the South tower. Do not go to through the glass doors, but instead turn around to face the wooden door, and go left. Immediately take the door to your right - if you get to the door with the passcode lock you have gone too far. Once you are through the door follow the signs until you reach the Ping Pong table room. If the door is closed (it shouldn't be!), facilities has the key at their desks (near the Michaelangelo meeting room ;) )"
+                    ,"moreinfo": ["https://www.youtube.com/watch?v=8x45dAA3wxM"]}
 
 
     }

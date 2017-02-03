@@ -130,7 +130,7 @@
 
 ;; Catch all
 (defroute "*" []
-  (set-html! application (html [p.flow-text "This doesn't look like anything to me..."])))
+  (set-html! application (html [:p.flow-text "This doesn't look like anything to me..."])))
 
 (defn ^:export go-to-fragment []
   (js/console.log "reloading" (str window.location.hash))
