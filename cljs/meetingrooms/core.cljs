@@ -99,19 +99,26 @@
      ]))
 
 
+(defn not-found []
+  (set-html! application (html [:p.flow-text "This doesn't look like anything to me..."])))
+
+
 (defn show-room [el room-id]
   ;; that way this is in the same animation frame and the indicator doesn't flicker
   (js/setTimeout (fn []
-                   (set-html! el (html (generate-room room-id)))
+                   (if (get-room room-id)
+                     (do
+                       (set-html! el (html (generate-room room-id)))
 
-                   (-> (jquery ".slider")
-                       (.slider (clj->js {"full_width" false
-                                          "indicators" (-> (get-room room-id)
-                                                           :pictures
-                                                           count
-                                                           (> 1))})))
-                   (js/window.scrollTo 0 0)
-                   )
+                       (-> (jquery ".slider")
+                           (.slider (clj->js {"full_width" false
+                                              "indicators" (-> (get-room room-id)
+                                                               :pictures
+                                                               count
+                                                               (> 1))})))
+                       (js/window.scrollTo 0 0))
+
+                     (not-found)))
                  0))
 
 (defn ^:export set-room-id [room-id]
@@ -130,7 +137,7 @@
 
 ;; Catch all
 (defroute "*" []
-  (set-html! application (html [:p.flow-text "This doesn't look like anything to me..."])))
+  (not-found))
 
 (defn ^:export go-to-fragment []
   (js/console.log "reloading" (str window.location.hash))

@@ -77,7 +77,9 @@
             console.log("set up rooms");
         });
 
-        $('input.autocomplete').focus();
+        window.setTimeout(function () {
+            $('input.autocomplete').focus();
+        }, 0); //focus after everything has been built up
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
