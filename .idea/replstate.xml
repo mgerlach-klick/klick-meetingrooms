@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1485893735870">{:repl-history {:ide [], :local [&quot;(start-repl)&quot; &quot;(+ 1 2\n   )&quot; &quot;(n-th 5\n      )&quot; &quot;(n-th 5)&quot; &quot;(start-repl\n  )&quot;], :remote [&quot;(+ 1 2\n   )&quot; &quot;(start-repl)&quot; &quot;(in-ns 'meetingrooms.core\n       )&quot; &quot;history&quot; &quot;(n-th 5)&quot; &quot;(pp rooms)&quot; &quot;(clojure.pprint/pprint @rooms)&quot; &quot;(require 'clojure.pprint\n         )&quot; &quot;(pprint @rooms)&quot; &quot;rooms&quot; &quot;(version @rooms)&quot; &quot;(:version @rooms)&quot; &quot;(js/document.getElementById \&quot;app\&quot;)&quot; &quot;(defn jquery [sel]\n  (js/jQuery sel))&quot; &quot;@rooms&quot; &quot;:test&quot; &quot;(js/alert \&quot;hi\&quot;)&quot; &quot;(start-repl\n  )&quot;]}}</component>
+</project>

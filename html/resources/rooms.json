@@ -272,13 +272,13 @@
 
 
 
-       ,"criet0": {"name": "Criet"
-                  ,"floor": null
-                  ,"tower": "Lobby"
-                  ,"aliases": ["Lobby room"]
-                   ,"pictures": []
-                  ,"description": "The Criet board room is maintained by the building. It's located in the north tower lobby, behind and to the right of the security guys desk."
-                  ,"moreinfo": []}
+     ,"creit0": {"name": "Creit"
+                 ,"floor": null
+                 ,"tower": "Lobby"
+                 ,"aliases": ["Lobby room"]
+                 ,"pictures": ["creit0_1.jpg", "creit0_2.jpg"]
+                 ,"description": "The Creit board room is maintained by the building. It's located in the north tower lobby, behind and to the right of the security guys desk. The entrance is, coming from the elevators, to the left."
+                 ,"moreinfo": []}
 
 
 
