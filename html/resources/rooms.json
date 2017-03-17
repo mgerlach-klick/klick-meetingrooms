@@ -227,7 +227,7 @@
                   ,"tower": "North"
                   ,"aliases": []
                   ,"pictures": ["warhol4_1.jpg"]
-                  ,"description": ""
+                  ,"description": "On the 4th floor, take the entrance without the corridor (the one that leads to Steve Willer's office) and Warhol is directly on your right after going through the door."
                   ,"moreinfo": ["https://en.wikipedia.org/wiki/Andy_Warhol"]}
 
      ,"wellnesscenter4": {"name": "Wellness Center"
@@ -271,6 +271,19 @@
                   ,"moreinfo": ["https://en.wikipedia.org/wiki/The_Notorious_B.I.G."]}
 
 
+     ,"newparents4": {"name": "New Mother's Room"
+                      ,"floor": 4
+                      ,"tower": "North"
+                      ,"aliases": ["New Parent's Room"]
+                      ,"pictures": []
+                      ,"description": "The New Mother's Room is on the 4th floor, and was previously the QA devices room. Use the 4th floor entrace by the corridor (the side with the toilets) and the room is immediately to your right. Booking notes: If you are a new mother and would like to use the room, please ask your Engagement Advocate for access to the New Mother's Room calendar. Once you have booked a time in the calendar, head to reception to collect a key to the room. Please always lock the door from the inside when you are in the room and when you leave."
+                      ,"about": "This room is exclusively for new mothers who need a private space to express milk. "
+                      ,"moreinfo": []}
+
+
+
+
+
 
      ,"creit0": {"name": "Creit"
                  ,"floor": null
@@ -296,7 +309,8 @@
                     ,"tower": "South"
                     ,"aliases": []
                     ,"pictures": ["pingpong8_1.jpg", "pingpong8_2.jpg", "pingpong8_3.jpg"]
-                    ,"description": "The ping pong table room is on the 8th floor of the South tower. Do not go to through the glass doors, but instead turn around to face the wooden door, and go left. Immediately take the door to your right - if you get to the door with the passcode lock you have gone too far. Once you are through the door follow the signs until you reach the Ping Pong table room. If the door is closed (it shouldn't be!), facilities has the key at their desks (near the Michaelangelo meeting room ;) )"
+                    ,"description": "The ping pong table room has unfortunately been demolished. The table can now be found by the cafe on the 2nd floor."
+                    ,"old_description": "The ping pong table room is on the 8th floor of the South tower. Do not go to through the glass doors, but instead turn around to face the wooden door, and go left. Immediately take the door to your right - if you get to the door with the passcode lock you have gone too far. Once you are through the door follow the signs until you reach the Ping Pong table room. If the door is closed (it shouldn't be!), facilities has the key at their desks (near the Michaelangelo meeting room ;) )"
                     ,"moreinfo": ["https://www.youtube.com/watch?v=8x45dAA3wxM"]}
 
 
