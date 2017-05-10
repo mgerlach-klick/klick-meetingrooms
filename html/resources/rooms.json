@@ -82,6 +82,14 @@
                 ,"description": "Fuji is between the Media/Analytics/Strategy area of KH and K2. Enter the 7th floor on the KH side, keep left, pass the former squash court (and current Media/Analytics/Strategy area) and then Fuji will be on your right."
                 ,"moreinfo": ["https://en.wikipedia.org/wiki/Mount_Fuji"]}
 
+     ,"muskoka7": {"name": "Muskoka"
+                ,"floor": 7
+                ,"tower": "North"
+                ,"aliases": []
+                   ,"pictures": ["muskoka7_1.jpg", "muskoka7_2.jpg"]
+                ,"description": "Muskoka is behind the project management area in the Southeast corner of the 7th floor. Turn left on entering the Klick Health area of the 7th floor, pass the kitchen, and it'll be straight ahead and slightly to the right."
+                ,"moreinfo": ["https://en.wikipedia.org/wiki/Lake_Muskoka"]}
+
 
 
 
