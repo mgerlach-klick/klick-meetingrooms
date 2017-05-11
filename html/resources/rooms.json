@@ -90,6 +90,17 @@
                 ,"description": "Muskoka is behind the project management area in the Southeast corner of the 7th floor. Turn left on entering the Klick Health area of the 7th floor, pass the kitchen, and it'll be straight ahead and slightly to the right."
                 ,"moreinfo": ["https://en.wikipedia.org/wiki/Lake_Muskoka"]}
 
+     ,"denali7": {"name": "Denali"
+                ,"floor": 7
+                ,"tower": "North"
+                ,"aliases": []
+                  ,"pictures": ["denali7_1.jpg"]
+                ,"description": "Denali is on the 7th Floor, North Tower in the North East corner, in the K2 Digital space. It is right next to Lawrence Tepperman's office."
+                ,"moreinfo": ["https://en.wikipedia.org/wiki/Denali"]}
+
+
+
+
 
 
 
