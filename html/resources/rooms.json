@@ -188,16 +188,6 @@
                       ,"description": "Take the 2nd floor testing area entrance (the blue looking one!) and the lounge is the first room on the left on your way to the door"
                       ,"moreinfo": []}
 
-     ,"jonimitchell2": {"name": "Joni Mitchell"
-                        ,"floor": 2
-                        ,"tower": "South"
-                        ,"aliases": []
-                        ,"pictures": []
-                        ,"description": "Somebody please provide me with instructions :)"
-                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Joni_Mitchell"]}
-
-
-
 
 
      ,"banksy4": {"name": "Banksy"
@@ -331,6 +321,80 @@
                     ,"description": "The ping pong table room has unfortunately been demolished. The table can now be found by the cafe on the 2nd floor."
                     ,"old_description": "The ping pong table room is on the 8th floor of the South tower. Do not go to through the glass doors, but instead turn around to face the wooden door, and go left. Immediately take the door to your right - if you get to the door with the passcode lock you have gone too far. Once you are through the door follow the signs until you reach the Ping Pong table room. If the door is closed (it shouldn't be!), facilities has the key at their desks (near the Michaelangelo meeting room ;) )"
                     ,"moreinfo": ["https://www.youtube.com/watch?v=8x45dAA3wxM"]}
+
+
+
+
+
+
+     ,"triumph2": {"name": "Triumph"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the clear doors to the reception desk. Walk through the doorway to the left of the desk and you should see Triumph on the opposite wall, across the hall, just a few feet right from the doorway."
+                 ,"moreinfo": []}
+
+
+     ,"jonimitchell2": {"name": "Joni Mitchell"
+                        ,"floor": 2
+                        ,"tower": "South"
+                        ,"aliases": []
+                        ,"pictures": []
+                        ,"description": "Somebody please provide me with instructions :)"
+                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Joni_Mitchell"]}
+
+
+     ,"greatbigsea2": {"name": "Great Big Sea"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the clear doors to the reception desk. Walk through the doorway to the left of the desk and make a right. Great Big Sea is the third of the 3 offices on the right. If you find the kitchen, you've gone too far."
+                 ,"moreinfo": []}
+
+     ,"leeaaron2": {"name": "Lee Aaron"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the frosted doors opposite of the the reception desk. Make a left and walk past the slight turn and it'll be the second, smaller meeting room on your left. If you find the kitchen, you've gone too far."
+                 ,"moreinfo": []}
+
+     ,"tragicallyhip2": {"name": "The Tragically Hip"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the frosted doors opposite of the the reception desk. Make a left and walk past the slight turn and it'll be the first meeting room on your left. If you find the kitchen, you've gone too far."
+                 ,"moreinfo": []}
+
+     ,"alanis2": {"name": "Alanis"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the frosted doors opposite of the the reception desk. Make a right and you'll see Alanis immediately on your right."
+                 ,"moreinfo": []}
+
+
+     ,"rush2": {"name": "Rush"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the clear doors to the reception desk. Walk through the doorway to the left of the desk and make a left. Walk directly straight, passed the red support pillar, and you should see 2 meeting rooms on opposites ends of the artistic wall. Rush is on the right."
+                 ,"moreinfo": []}
+
+
+     ,"neilyoung2": {"name": "Neil Young"
+                 ,"floor": 2
+                 ,"tower": "South"
+                 ,"aliases": []
+                   ,"pictures": []
+                   ,"description": "Enter from the elevator into the clear doors to the reception desk. Walk through the doorway to the left of the desk and make a left. Walk directly straight, passed the red support pillar, and you should see 2 meeting rooms on opposites ends of the artistic wall. Neil Young is on the left."
+                 ,"moreinfo": []}
+
 
 
     }
