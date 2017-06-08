@@ -139,8 +139,22 @@
                         ,"description": "The Salvador Dali is in the Genome and Sensei area. Enter the 3rd Floor North Tower on the reception side, turn right when facing reception, and it will be against the middle of the left wall (past the library)."
                         ,"moreinfo": ["https://en.wikipedia.org/wiki/Salvador_Dalí"]}
 
+     ,"fender3": {"name": "Fender"
+                         ,"floor": 3
+                         ,"tower": "North"
+                        ,"aliases": []
+                         ,"pictures": ["fender3_1.jpg"]
+                        ,"description": "Enter through the not-Reception doors. Fender is immediately to your left"
+                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Fender_Musical_Instruments_Corporation"]}
 
 
+     ,"vox3": {"name": "Vox"
+                         ,"floor": 3
+                         ,"tower": "North"
+                        ,"aliases": []
+                         ,"pictures": ["vox3_1.jpg"]
+                        ,"description": "Enter through the not-Reception doors. Vos is immediately to your right"
+                        ,"moreinfo": ["https://en.wikipedia.org/wiki/Vox_(musical_equipment)"]}
 
 
 
