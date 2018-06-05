@@ -81,5 +81,28 @@
             $('input.autocomplete').focus();
         }, 0); //focus after everything has been built up
 
+
+        // Initialize the Amazon Cognito credentials provider
+        AWS.config.region = 'us-east-1'; // Region
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'us-east-1:07354ec8-afb3-4181-974b-e4731cf7afd0',
+        });
+
+        var dynamodb = new AWS.DynamoDB();
+
+        var params = {
+            TableName : "meetingrooms",
+            FilterExpression: "#type = :ip",
+            ExpressionAttributeNames:{ // type is a reserved word so i have to replace it
+                "#type": "type"
+            },
+            ExpressionAttributeValues: {
+                ":ip": {"S": "ip"}
+            }
+        };
+
+        dynamodb.scan(params, (err,data) =>  console.log( err ? err : data))
+
+
     }); // end of document ready
 })(jQuery); // end of jQuery name space

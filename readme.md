@@ -2,6 +2,12 @@
 
 Live version: <http://rooms.klick.com>
 
+AWS: 
+cognito role: arn:aws:iam::975056330565:role/Cognito_MeetingRoomsUnauth_Role 
+bucket: arn:aws:s3:::meetingroom-pics
+dynamodb: arn:aws:dynamodb:us-east-1:975056330565:table/meetingrooms
+
+
 
 # Development
 - Install boot
