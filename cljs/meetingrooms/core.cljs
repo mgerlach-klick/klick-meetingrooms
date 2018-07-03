@@ -51,6 +51,9 @@
 (defn set-html! [el content]
   (aset el "innerHTML" content))
 
+(defn room-edit [room-id]
+  [:form ])
+
 (defn room-header [room]
   [:h4.header  {:style "display: inline" } (:name room)
    [:br.hide-on-med-and-up]
@@ -127,6 +130,28 @@
 (defroute room-path "/room/:room" [room]
   (show-room application (keyword room)))
 
+(defn input
+  "An input element which updates its value on change"
+  [{:keys [id type value required placeholder readonly label] :as params}]
+  (let [id (or id (str (random-uuid)))]
+    [:span
+     (when label
+       [:label {:for id} label])
+     [:input (merge {:id (name id)
+                     :name (name (get params :name))
+                     :class "form-control"
+                     :type (name type)
+                     :value value
+                     ;;:on-change #(reset! value (-> % .-target .-value))
+                     }
+                    (when placeholder {:placeholder (if (and (= type "text")
+                                                           placeholder)
+                                                    placeholder
+                                                    "")})
+                    (when required {:required "required"})
+                    (when readonly {:readonly "readonly"}))]]))
+
+
 (defroute home-path "/" []
   (set-html! application (html [:span
                                 [:p.section.flow-text "Just search for the meeting room by tapping on the search bar above! It supports fuzzy search and as soon as there is only one option left it will automatically load the result!"]
@@ -134,6 +159,17 @@
                                 [:p.section.flow-text "Feel free to link directly to the URLs of the meeting rooms, I will keep the URLs stable."]
                                 [:p.section.flow-text "Please also help by contributing to this site by offering corrections, better instructions, additions, comments, and all that. There is a link through which you can email at the bottom of every page."]
                                 ])))
+
+(defroute edit-path "/edit" []
+  (set-html! application (html
+                          [:div
+                           [:form
+                            (input {:label "Room-ID" :name "id" :readonly true :type :text})
+                            (input {:label "Tower" :name "tower" :type :text})
+                            (input {:label "Floor" :name "floor" :type :number :value 4})
+                            (input {:label "Aliases" :name "aliases" :type :text})
+                            (input {:label "Description" :name "description" :type :textarea})
+                      ]])))
 
 ;; Catch all
 (defroute "*" []

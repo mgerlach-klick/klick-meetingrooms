@@ -91,14 +91,7 @@
         var dynamodb = new AWS.DynamoDB();
 
         var params = {
-            TableName : "meetingrooms",
-            FilterExpression: "#type = :ip",
-            ExpressionAttributeNames:{ // type is a reserved word so i have to replace it
-                "#type": "type"
-            },
-            ExpressionAttributeValues: {
-                ":ip": {"S": "ip"}
-            }
+            TableName : "meetingrooms"
         };
 
         dynamodb.scan(params, (err,data) =>  console.log( err ? err : data))
