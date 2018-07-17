@@ -130,7 +130,8 @@
 (defroute room-path "/room/:room" [room]
   (show-room application (keyword room)))
 
-(defn input
+
+(defn input-text
   "An input element which updates its value on change"
   [{:keys [id type value required placeholder readonly label] :as params}]
   (let [id (or id (str (random-uuid)))]
@@ -141,15 +142,29 @@
                      :name (name (get params :name))
                      :class "form-control"
                      :type (name type)
-                     :value value
-                     ;;:on-change #(reset! value (-> % .-target .-value))
-                     }
+                     :value value}
                     (when placeholder {:placeholder (if (and (= type "text")
                                                            placeholder)
                                                     placeholder
                                                     "")})
                     (when required {:required "required"})
                     (when readonly {:readonly "readonly"}))]]))
+
+(defn input-textarea
+  [{:keys [label id type value required readonly] :as params}]
+  (let [id (or id (str (random-uuid)))]
+    [:span
+     (when label
+       [:label {:for id} label])
+     [:textarea (merge {:id    (name id)
+                       :name  (name (get params :name))
+                       :class "form-control"
+                       :type  (name type)
+                        }
+                       (when required {:required "required"})
+                       (when readonly {:readonly "readonly"}))
+      value]]))
+
 
 
 (defroute home-path "/" []
@@ -164,12 +179,11 @@
   (set-html! application (html
                           [:div
                            [:form
-                            (input {:label "Room-ID" :name "id" :readonly true :type :text})
-                            (input {:label "Tower" :name "tower" :type :text})
-                            (input {:label "Floor" :name "floor" :type :number :value 4})
-                            (input {:label "Aliases" :name "aliases" :type :text})
-                            (input {:label "Description" :name "description" :type :textarea})
-                      ]])))
+                            (input-text {:label "Room-ID" :name "id" :readonly true :type :text})
+                            (input-text {:label "Tower" :name "tower" :type :text})
+                            (input-text {:label "Floor" :name "floor" :type :number :value 4})
+                            (input-text {:label "Aliases" :name "aliases" :type :text})
+                            (input-textarea {:label "Description" :name "description" :type :textarea})]])))
 
 ;; Catch all
 (defroute "*" []
