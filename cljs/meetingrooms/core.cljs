@@ -36,7 +36,7 @@
 (defn get-room [room-id]
   (get-in @rooms [:rooms room-id]))
 
-(defn n-th [n]
+(defn nthify [n]
   (when n
     (str n
          (let [rem (mod n 100)]
@@ -61,7 +61,7 @@
     " ("
     (when (:floor room)
       (str
-       (n-th (:floor room))
+       (nthify (:floor room))
        " "))
     (when (:tower room)
       (:tower room))
@@ -97,8 +97,8 @@
              [:a {:href info} info ]])]))
 
      [:hr]
-     [:a.right {:href (str "mailto:mgerlach@klick.com?subject=Meetingrooms%20" room-id)}
-      "Contribute to make this page better!"]
+     [:a.right {:href (str "/rooms/" (name room-id) "/edit")}
+      "Edit this page"]
      ]))
 
 
@@ -127,8 +127,7 @@
 (defn ^:export set-room-id [room-id]
   (.setToken history (str "/room/" room-id)))
 
-(defroute room-path "/room/:room" [room]
-  (show-room application (keyword room)))
+
 
 
 (defn input-text
@@ -151,18 +150,21 @@
                     (when readonly {:readonly "readonly"}))]]))
 
 (defn input-textarea
-  [{:keys [label id type value required readonly] :as params}]
+  [{:keys [label id type value required readonly rows cols style] :as params}]
   (let [id (or id (str (random-uuid)))]
     [:span
      (when label
        [:label {:for id} label])
      [:textarea (merge {:id    (name id)
-                       :name  (name (get params :name))
-                       :class "form-control"
-                       :type  (name type)
+                        :name  (name (get params :name))
+                        :class "form-control"
+                        :type  (name type)
+                        :style style
                         }
                        (when required {:required "required"})
-                       (when readonly {:readonly "readonly"}))
+                       (when readonly {:readonly "readonly"})
+                       (when rows {:rows rows})
+                       (when cols {:cols cols}))
       value]]))
 
 
@@ -175,15 +177,33 @@
                                 [:p.section.flow-text "Please also help by contributing to this site by offering corrections, better instructions, additions, comments, and all that. There is a link through which you can email at the bottom of every page."]
                                 ])))
 
+(defn edit-form
+  [{:keys [roomid name tower floor aliases description]}]
+  [:div
+   [:form {:id :edit-form}
+    (input-text {:label "Room-ID" :name "roomid" :value roomid :readonly (when-not roomid true) :type :text})
+    (input-text {:label "name" :name "name" :value name  :type :text})
+    (input-text {:label "Tower" :name "tower" :value tower :type :text})
+    (input-text {:label "Floor" :name "floor" :value floor :type :number})
+    (input-text {:label "Aliases" :name "aliases" :value aliases :type :text})
+    (input-textarea {:label "Description" :name "description" :value description :type :textarea :rows 6 :style "height: 10em"})
+    [:div "here we upload and delete pics! Upload just throws it onto s3 and links it in the database."]
+    [:div "do we do DDB stuff here or through a lambda?"]
+    [:button "Save"]]])
+
+
+(defroute room-path "/room/:room" [room]
+  (show-room application (keyword room)))
+
+(defroute room-edit-path "/room/:roomid/edit" [roomid]
+  (let [room (get-room roomid)]
+    (.log js/console "room from getroom: " room)
+    (set-html! application (html
+                            (edit-form (merge {:roomid roomid} room))))))
+
 (defroute edit-path "/edit" []
   (set-html! application (html
-                          [:div
-                           [:form
-                            (input-text {:label "Room-ID" :name "id" :readonly true :type :text})
-                            (input-text {:label "Tower" :name "tower" :type :text})
-                            (input-text {:label "Floor" :name "floor" :type :number :value 4})
-                            (input-text {:label "Aliases" :name "aliases" :type :text})
-                            (input-textarea {:label "Description" :name "description" :type :textarea})]])))
+                          (edit-form {:floor 6 :description "test"}))))
 
 ;; Catch all
 (defroute "*" []
