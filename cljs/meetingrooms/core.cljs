@@ -97,7 +97,7 @@
              [:a {:href info} info ]])]))
 
      [:hr]
-     [:a.right {:href (str "/rooms/" (name room-id) "/edit")}
+     [:a.right {:href (str "/rooms/" room-id "/edit")}
       "Edit this page"]
      ]))
 
